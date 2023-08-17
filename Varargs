@@ -1,0 +1,29 @@
+class MathOperations {
+    public int addIntegers(int... numbers) {
+        int sum = 0;
+        for (int num : numbers) {
+            sum += num;
+        }
+        return sum;
+    }
+
+    public double addDoubles(double... numbers) {
+        double sum = 0;
+        for (double num : numbers) {
+            sum += num;
+        }
+        return sum;
+    }
+}
+
+public class VarargsExample {
+    public static void main(String[] args) {
+        MathOperations math = new MathOperations();
+
+        System.out.println("Sum of integers: " + math.addIntegers(5, 10, 15));
+        System.out.println("Sum of integers: " + math.addIntegers(2, 4, 6, 8, 10));
+
+        System.out.println("Sum of doubles: " + math.addDoubles(2.5, 3.5));
+        System.out.println("Sum of doubles: " + math.addDoubles(1.2, 2.2, 3.2));
+    }
+}
